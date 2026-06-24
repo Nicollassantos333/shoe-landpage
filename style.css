@@ -1,82 +1,226 @@
-body{ 
-    font-family: fantasy;
+/* =========================
+   CONFIGURAÇÃO GERAL
+========================= */
+body {
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    background-color: rgb(0, 0, 0);
-    margin: auto;
-    padding: 40px
+    background-color: #000;
+    margin: 0;
+    padding: 40px 20px;
+    color: white;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: aliceblue;
+    font-family: sans-serif;
+}
+
+.intro {
+    font-size: 28px;
+    font-weight: 600;
+    max-width: 1000px;
+    margin: 0 auto 30px auto;
+    line-height: 1.4;
+    color: aliceblue;
+}
+
+/* =========================
+   CARROSSEL DE IMAGENS
+========================= */
+.carrossel {
+    position: relative;
+    width: 900px;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+#imagem-produto {
+    display: block;
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 0 25px rgba(115, 85, 255, 0.25);
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+    0% {
+        transform: scale(1) translateY(0px);
     }
-/* botão estilo acordeão */
+    50% {
+        transform: scale(1.02) translateY(-6px);
+    }
+    100% {
+        transform: scale(1) translateY(0px);
+    }
+}
+
+/* botões do carrossel de imagem */
+.btn-carrossel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.45);
+    color: white;
+    border: none;
+    font-size: 34px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    z-index: 2;
+}
+
+.btn-carrossel:hover {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.esquerda {
+    left: 15px;
+}
+
+.direita {
+    right: 15px;
+}
+
+/* =========================
+   BOTÃO DA DESCRIÇÃO
+========================= */
 .accordion {
-    background: black;
+    background: #0d0d0d;
     color: white;
     cursor: pointer;
-    padding: 15px 20px;
-    width: 200px;
+    padding: 15px 22px;
+    width: 240px;
     border: none;
-    border-radius: 10px;
-    font-size: 16px;
+    border-radius: 12px;
+    font-size: 22px;
+    font-weight: 600;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    margin: 0 auto;
+    margin: 25px auto 0 auto;
+    transition: background 0.3s ease, border-color 0.3s ease;
 }
 
-/* seta */
+.accordion:hover {
+    background: #161616;
+    border-color: #555;
+}
+
 .arrow {
     transition: transform 0.3s ease;
-    margin: 0 auto;
+    font-size: 22px;
 }
 
-/* painel (descrição) */
+/* =========================
+   PAINEL DA DESCRIÇÃO
+========================= */
 .painel {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.4s ease;
-    background: rgb(0, 0, 0);
-    width: 300px;
-    margin: 10px auto;
-    border-radius: 10px;
-    padding: 10 15px;
-    box-sizing:content-box;
-    font-size: 60px;
+    transition: max-height 0.45s ease, padding 0.35s ease;
+    background: #000;
+    width: 900px;
+    max-width: 95%;
+    margin: 12px auto 0 auto;
+    border-radius: none;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
-/* quando aberto */
 .painel.aberto {
-    padding: 15px;
+    padding: 22px;
+    border: none 
 }
 
-h1{
-    font-size: 30px;
-    color: aliceblue;
-    margin-bottom: auto ;
-    font-family:sans-serif;
-    }
-            
-p{
-    font-size: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    max-width: 700px;
-    margin: 0 auto 30px auto;
-    margin-top: 20px;
-    color: aliceblue;
-    }
-            
-img{
-    display: block;
-    margin: 0 auto;
-    width: 800px;
-    border-radius: 12px;
-    }
-button {
-    background-color: black;
+/* =========================
+   CARROSSEL DE DESCRIÇÃO
+========================= */
+.descricao-carrossel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+/* botões laterais da descrição */
+.btn-desc {
+    background: rgba(255, 255, 255, 0.08);
     color: white;
     border: none;
-    padding: 12px 20px;
-    font-size: 16px;
-    border-radius: 8px;
+    font-size: 28px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
     cursor: pointer;
+    transition: background 0.3s ease;
+    flex-shrink: 0;
 }
-    
+
+.btn-desc:hover {
+    background: rgb(0, 0, 0);
+}
+
+/* área do texto */
+.conteudo-descricao {
+    flex: 1;
+    text-align: center;
+}
+
+/* título da descrição */
+#titulo-descricao {
+    color: aliceblue;
+    font-size: 32px;
+    margin: 0 0 14px 0;
+    font-family: sans-serif;
+}
+
+/* texto da descrição */
+#texto-descricao {
+    font-size: 24px;
+    color: aliceblue;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    .intro {
+        font-size: 20px;
+    }
+
+    .accordion {
+        width: 220px;
+        font-size: 18px;
+    }
+
+    #titulo-descricao {
+        font-size: 24px;
+    }
+
+    #texto-descricao {
+        font-size: 18px;
+    }
+
+    .btn-carrossel,
+    .btn-desc {
+        width: 44px;
+        height: 44px;
+        font-size: 24px;
+    }
+
+    .descricao-carrossel {
+        gap: 10px;
+    }
+}
