@@ -1,63 +1,176 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alien X</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alien X</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <!-- TÍTULO -->
-    <h1>Alien X</h1>
+  <!-- FUNDO DECORATIVO -->
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+  <div class="grid-overlay"></div>
 
-    <!-- TEXTO PRINCIPAL -->
-    <p class="intro">
-        O Alien X redefine o conceito de performance lifestyle.
-        Feito para quem domina as quadras e dita as regras do streetwear,
-        ele equilibra nostalgia e engenharia futurista.
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">ALIEN <span>X</span></div>
+
+    <nav class="nav">
+      <a href="#hero">Início</a>
+      <a href="#tecnologia">Tecnologia</a>
+      <a href="#colorways">Colorways</a>
+      <a href="#comprar">Comprar</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero reveal" id="hero">
+    <div class="hero-text">
+      <p class="eyebrow">ALIEN X</p>
+      <h1>DOMINE O FUTURO</h1>
+      <p class="hero-subtitle">
+        Tecnologia de outro mundo. Estilo que atravessa o tempo e o espaço.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#colorways" class="btn btn-primary">Ver colorways</a>
+        <a href="#tecnologia" class="btn btn-secondary">Explorar tecnologia</a>
+      </div>
+    </div>
+
+    <div class="hero-media float">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="video/Alienx.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo.
+        </video>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro reveal">
+    <p class="section-label">ALIEN X</p>
+    <h2>Não é só um tênis. É uma declaração.</h2>
+    <p class="intro-text">
+      O Alien X não é apenas um calçado; é uma declaração de estilo que traz o futuro para o asfalto.
     </p>
+  </section>
 
-    <!-- CARROSSEL DE IMAGENS -->
-    <div class="carrossel">
-        <button class="btn-carrossel esquerda" onclick="voltarImagem()">❮</button>
-
-        <img 
-            id="imagem-produto"
-            src="https://plain-enam-prod-public.komododecks.com/202606/20/K5XaLqE5ONXidvNbj1eq/image.png"
-            alt="Tênis Alien X"
-        >
-
-        <button class="btn-carrossel direita" onclick="proximaImagem()">❯</button>
+  <!-- FEATURES -->
+  <section class="features" id="tecnologia">
+    <div class="feature-card reveal">
+      <h3>Design e Silhueta</h3>
+      <p>
+        Inspirado no formato robusto e dinâmico do aclamado Jordan Tatum 2, o modelo traz um cabedal estruturado em mesh balístico preto, sobreposições de couro roxo fosco e linhas fluidas que abraçam o pé, garantindo o visual marcante dos anos dourados dos sneakers.
+      </p>
     </div>
 
-    <!-- BOTÃO DA DESCRIÇÃO -->
-    <button class="accordion" onclick="toggleDescricao()">
-        <span>Descrição</span>
-        <span id="seta" class="arrow">▼</span>
-    </button>
+    <div class="feature-card reveal">
+      <h3>Paleta Alienígena</h3>
+      <p>
+        A combinação do preto profundo com o roxo cósmico é acesa por detalhes em verde neon fluorescente, aplicados estrategicamente nos passadores de cadarço, nos logotipos e nas cápsulas da sola.
+      </p>
+    </div>
 
-    <!-- PAINEL DA DESCRIÇÃO -->
-    <div id="descricao" class="painel">
-        <div class="descricao-carrossel">
+    <div class="feature-card reveal">
+      <h3>Tecnologia Neon Inteligente</h3>
+      <p>
+        Equipado com amortecimento responsivo de última geração, a entressola traz janelas translúcidas iluminadas por LEDs internos, que brilham de acordo com o impacto e o movimento do atleta.
+      </p>
+    </div>
+  </section>
 
-            <!-- botão da esquerda -->
-            <button class="btn-desc" onclick="descricaoAnterior()">❮</button>
+  <!-- HABILIDADE ESPECIAL -->
+  <section class="power-section reveal">
+    <div class="power-header">
+      <p class="section-label">HABILIDADE ESPECIAL</p>
+      <h2>Dobra Temporal e Espacial <span>(Omni-Presence)</span></h2>
+      <p>
+        Quando o jogador ativa a energia máxima do tênis, as linhas verdes e roxas de LED começam a pulsar em sincronia com os batimentos cardíacos do atleta.
+      </p>
+    </div>
 
-            <!-- conteúdo da descrição -->
-            <div class="conteudo-descricao">
-                <h2 id="titulo-descricao">Design e Silhueta</h2>
-                <p id="texto-descricao">
-                    Inspirado no formato robusto e dinâmico do aclamado Jordan Tatum 2, o modelo traz um cabedal estruturado em mesh balístico preto, sobreposições de couro roxo fosco e linhas fluidas que abraçam o pé, garantindo o visual marcante dos anos dourados dos sneakers.
-                </p>
-            </div>
+    <div class="power-grid">
+      <div class="power-card reveal">
+        <h3>Manipulação da Gravidade</h3>
+        <p class="power-subtitle">(Salto Dimensional)</p>
+        <p>
+          Ao flexionar a entressola inspirada no JT 2, o tênis altera momentaneamente o peso do atleta em relação ao solo. O jogador consegue flutuar por milésimos de segundo a mais no ar, permitindo enterradas e pontes-aéreas indefensáveis, como se estivesse jogando em gravidade zero.
+        </p>
+      </div>
 
-            <!-- botão da direita -->
-            <button class="btn-desc" onclick="proximaDescricao()">❯</button>
+      <div class="power-card reveal">
+        <h3>Corte de Linha Temporal</h3>
+        <p class="power-subtitle">(Invisibilidade de Movimento)</p>
+        <p>
+          Durante o crossover, o Alien X distorce a percepção de espaço dos adversários. Para os defensores, parece que o jogador se teletransportou um passo para o lado, deixando a marcação completamente perdida no tempo.
+        </p>
+      </div>
 
+      <div class="power-card reveal">
+        <h3>Previsão Cósmica</h3>
+        <p class="power-subtitle">(Bloqueio Perfeito)</p>
+        <p>
+          O amortecimento responsivo vibra levemente milissegundos antes do arremesso do adversário, enviando um estímulo ao jogador e revelando a trajetória exata da bola para um toco perfeito.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLORWAYS -->
+  <section class="colorways-section" id="colorways">
+    <div class="section-head reveal">
+      <p class="section-label">3 COLORWAYS. 1 MISSÃO.</p>
+      <h2>Escolha sua versão do Alien X</h2>
+    </div>
+
+    <div class="colorways-grid">
+      <!-- OMNIVERSE -->
+      <article class="shoe-card reveal omni">
+        <div class="shoe-image">
+          <img src="https://plain-enam-prod-public.komododecks.com/202606/20/K5XaLqE5ONXidvNbj1eq/image.png" alt="Alien X OmniVerse">
         </div>
-    </div>
+        <div class="shoe-info">
+          <h3>OmniVerse</h3>
+          <p>Preto cósmico, roxo espacial e verde neon em sua forma mais icônica.</p>
+          <button class="buy-btn">Comprar agora</button>
+        </div>
+      </article>
 
-    <script src="script.js"></script>
+      <!-- GALAXY GOLD -->
+      <article class="shoe-card reveal gold">
+        <div class="shoe-image">
+          <img src="https://plain-enam-prod-public.komododecks.com/202606/20/6v7A4hLYpII2vNl03UJF/image.png" alt="Alien X Galaxy Gold">
+        </div>
+        <div class="shoe-info">
+          <h3>Galaxy Gold</h3>
+          <p>Uma variação mais rara, com energia dourada e presença de elite nas quadras.</p>
+          <button class="buy-btn">Comprar agora</button>
+        </div>
+      </article>
+
+      <!-- GUAVA BLUE -->
+      <article class="shoe-card reveal blue">
+        <div class="shoe-image">
+          <img src="https://plain-enam-prod-public.komododecks.com/202606/20/K5XaLqE5ONXidvNbj1eq/image.png" alt="Alien X Guava Blue">
+        </div>
+        <div class="shoe-info">
+          <h3>Guava Blue</h3>
+          <p>Uma leitura mais vibrante do Alien X, com tons frios e energia elétrica.</p>
+          <button class="buy-btn">Comprar agora</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- FOOTER CTA -->
+  <section class="footer-cta reveal" id="comprar">
+    <h2>O futuro já chegou.</h2>
+    <p>Entre em quadra com uma silhueta que parece ter vindo de outra dimensão.</p>
+    <a href="#colorways" class="btn btn-primary">Comprar Alien X</a>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
